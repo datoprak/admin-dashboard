@@ -6,11 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
   </head>
   <body>
     <div class="container">
-      <div class="sidebar"></div>
-      <div class="header"></div>
+      <div class="sidebar">
+        <div class="logo">
+          <span class="material-symbols-outlined"> dashboard </span>
+          <div class="logo-text">Dashboard</div>
+        </div>
+        <div class="nav-1">
+          <ul>
+            <li>
+              <span class="material-symbols-outlined"> home </span
+              ><a href="#">Home</a>
+            </li>
+            <li>
+              <span class="material-symbols-outlined"> badge </span
+              ><a href="#">Profile</a>
+            </li>
+            <li>
+              <span class="material-symbols-outlined"> mail </span
+              ><a href="#">Messages</a>
+            </li>
+            <li>
+              <span class="material-symbols-outlined"> history </span
+              ><a href="#">History</a>
+            </li>
+            <li>
+              <span class="material-symbols-outlined"> task </span
+              ><a href="#">Tasks</a>
+            </li>
+            <li>
+              <span class="material-symbols-outlined"> groups </span
+              ><a href="#">Communities</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-2">
+          <ul>
+            <li>
+              <span class="material-symbols-outlined"> settings </span
+              ><a href="#">Settings</a>
+            </li>
+            <li>
+              <span class="material-symbols-outlined"> help </span
+              ><a href="#">Support</a>
+            </li>
+            <li>
+              <span class="material-symbols-outlined"> security </span
+              ><a href="#">Privacy</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header">
+        <div class="header-top">
+          <div class="search">
+            <span class="material-symbols-outlined"> search </span>
+            <input
+              type="text"
+              name="search-bar"
+              id="search-bar"
+              placeholder="Search"
+            />
+          </div>
+          <div class="notification">
+            <span class="material-symbols-outlined">
+              notifications_active
+            </span>
+            <img
+              src="https://picsum.photos/id/237/200/200"
+              alt="a cute puppy"
+            />
+            <div class="name">John Smith</div>
+          </div>
+        </div>
+        <div class="header-bottom">
+          <div class="profile">
+            <img
+              src="https://picsum.photos/id/237/200/200"
+              alt="a cute puppy"
+            />
+            <div class="greetings">
+              <p>Hi there,</p>
+              <p>John Smith (@johnsmith)</p>
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="button">New</button
+            ><button class="button">Upload</button
+            ><button class="button">Share</button>
+          </div>
+        </div>
+      </div>
       <div class="main-content"></div>
     </div>
   </body>
