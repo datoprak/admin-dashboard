@@ -145,5 +145,45 @@ li {
 .main-content {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-  min-height: 200px;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 16px;
+  grid-template-areas:
+    "yptitle atitle"
+    "projects ann"
+    "projects ttitle"
+    "projects trending";
+}
+
+.your-projects-title {
+  grid-area: yptitle;
+}
+
+.your-projects {
+  grid-area: projects;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  gap: 16px;
+}
+
+.announcements-title {
+  grid-area: atitle;
+}
+
+.announcements {
+  grid-area: ann;
+}
+
+.trending-title {
+  grid-area: ttitle;
+}
+
+.trending {
+  grid-area: trending;
+}
+
+.trending-card > img {
+  border-radius: 50%;
+  width: 50px;
 }
