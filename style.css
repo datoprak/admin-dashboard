@@ -6,14 +6,14 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  text-decoration: none;
   list-style: none;
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
 }
 
 .sidebar {
@@ -42,6 +42,7 @@
 
 a {
   color: #f7fee7;
+  text-decoration-line: none;
 }
 
 .nav-1 > ul,
@@ -55,6 +56,12 @@ li {
   display: flex;
   align-items: center;
   gap: 16px;
+  font-weight: 700;
+}
+
+li > .material-symbols-outlined,
+li > a {
+  font-size: 1.4rem !important;
   font-weight: 700;
 }
 
@@ -128,13 +135,13 @@ li {
   font-weight: 700;
 }
 
-.buttons {
+.header-buttons {
   display: flex;
   gap: 16px;
   align-items: center;
 }
 
-.button {
+.header-buttons > .button {
   padding: 8px 32px;
   border: none;
   border-radius: 16px;
@@ -146,9 +153,10 @@ li {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
   padding: 32px;
+  background-color: #e5e7eb;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  gap: 16px;
+  gap: 32px;
   grid-template-areas:
     "yptitle atitle"
     "projects ann"
@@ -158,13 +166,61 @@ li {
 
 .your-projects-title {
   grid-area: yptitle;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .your-projects {
   grid-area: projects;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 5px minmax(128px, 2fr) 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  gap: 8px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 1px gray;
+}
+
+.left-color {
+  background-color: #dc2626;
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.title {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  padding-top: 16px;
+  font-weight: 700;
+  font-style: 1.1rem;
+}
+
+.content {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+}
+
+.project-buttons {
+  display: flex;
   gap: 16px;
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+
+.project-buttons > .button {
+  padding: 0;
+  border: none;
+  border-radius: 16px;
+  background-color: #fff;
+  height: min-content;
 }
 
 .announcements-title {
