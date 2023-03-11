@@ -225,10 +225,30 @@ li > a {
 
 .announcements-title {
   grid-area: atitle;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .announcements {
   grid-area: ann;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 1px gray;
+  display: grid;
+  padding: 16px;
+  gap: 8px;
+}
+
+.ann-card {
+  padding: 8px;
+}
+
+.ann-title {
+  font-weight: 700;
+}
+
+.ann-content {
+  font-size: 0.7rem;
 }
 
 .trending-title {
